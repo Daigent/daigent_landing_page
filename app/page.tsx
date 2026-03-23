@@ -12,7 +12,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Image
-              src="/Daigent-03.png"
+              src="/Daigent-03-transparent.png"
               alt="Daigent Logo"
               width={160}
               height={40}
@@ -50,7 +50,7 @@ export default function Home() {
             <span className="text-xs font-semibold tracking-wider uppercase text-brand-cyan">The Future of Automation</span>
           </motion.div>
 
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
@@ -181,8 +181,8 @@ export default function Home() {
       <footer className="border-t border-white/10 glass mt-auto">
         <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
-             <Image
-              src="/Daigent-01.png"
+            <Image
+              src="/Daigent-01-transparent.png"
               alt="Daigent Icon"
               width={32}
               height={32}
