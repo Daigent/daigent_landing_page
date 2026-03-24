@@ -24,10 +24,11 @@ export default function Home() {
             <a href="#services" className="hover:text-brand-cyan transition-colors">Services</a>
             <a href="#process" className="hover:text-brand-cyan transition-colors">Process</a>
             <a href="#about" className="hover:text-brand-cyan transition-colors">About Us</a>
+            <a href="#contact" className="hover:text-brand-cyan transition-colors">Contact</a>
           </div>
-          <button className="px-6 py-2.5 rounded-full bg-brand-blue/20 border border-brand-cyan/30 text-brand-cyan text-sm font-semibold hover:bg-brand-cyan hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(0,240,255,0.2)] hover:shadow-[0_0_25px_rgba(0,240,255,0.6)]">
+          <a href="#contact" className="px-6 py-2.5 rounded-full bg-brand-blue/20 border border-brand-cyan/30 text-brand-cyan text-sm font-semibold hover:bg-brand-cyan hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(0,240,255,0.2)] hover:shadow-[0_0_25px_rgba(0,240,255,0.6)]">
             Book a Demo
-          </button>
+          </a>
         </div>
       </nav>
 
@@ -75,12 +76,12 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
           >
-            <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-brand-cyan to-brand-blue text-black font-bold text-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 hover:gap-4 duration-300">
+            <a href="#contact" className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-brand-cyan to-brand-blue text-black font-bold text-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 hover:gap-4 duration-300">
               Transform Your Business <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="w-full sm:w-auto px-8 py-4 rounded-full glass hover:bg-white/5 transition-colors text-white font-medium text-lg">
+            </a>
+            <a href="#services" className="w-full sm:w-auto px-8 py-4 rounded-full glass hover:bg-white/5 transition-colors text-white font-medium text-lg flex items-center justify-center">
               Explore Services
-            </button>
+            </a>
           </motion.div>
         </section>
 
@@ -169,9 +170,49 @@ export default function Home() {
             <div className="relative z-10">
               <h2 className="text-4xl md:text-6xl font-bold mb-6">Ready to Automate?</h2>
               <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">Stop managing workflows. Start deploying intelligence. Book a consultation with a Daigent AI architect today.</p>
-              <button className="px-10 py-5 rounded-full bg-white text-black font-bold text-xl hover:bg-brand-cyan transition-colors shadow-xl shadow-brand-cyan/20">
+              <a href="#contact" className="inline-block px-10 py-5 rounded-full bg-white text-black font-bold text-xl hover:bg-brand-cyan transition-colors shadow-xl shadow-brand-cyan/20">
                 Book Your Consultation
-              </button>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="py-24 px-6 max-w-7xl mx-auto w-full">
+          <div className="max-w-3xl mx-auto p-12 rounded-[2.5rem] glass border border-white/10 relative overflow-hidden">
+            <div className="absolute inset-0 bg-brand-blue/5 blur-[80px]" />
+            <div className="relative z-10">
+              <div className="text-center mb-10">
+                <h2 className="text-3xl md:text-5xl font-bold mb-4">Let's Talk <span className="text-brand-cyan">AI</span></h2>
+                <p className="text-white/60">Fill out the form below and one of our AI architects will get back to you within 24 hours.</p>
+              </div>
+
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2 text-left">
+                    <label htmlFor="name" className="text-sm font-medium text-white/70 ml-1">Full Name</label>
+                    <input type="text" id="name" className="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 focus:border-brand-cyan/50 focus:bg-white/10 outline-none transition-all placeholder:text-white/20 text-white shadow-inner" placeholder="John Doe" required />
+                  </div>
+                  <div className="space-y-2 text-left">
+                    <label htmlFor="email" className="text-sm font-medium text-white/70 ml-1">Work Email</label>
+                    <input type="email" id="email" className="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 focus:border-brand-cyan/50 focus:bg-white/10 outline-none transition-all placeholder:text-white/20 text-white shadow-inner" placeholder="john@company.com" required />
+                  </div>
+                </div>
+                
+                <div className="space-y-2 text-left">
+                  <label htmlFor="company" className="text-sm font-medium text-white/70 ml-1">Company Name</label>
+                  <input type="text" id="company" className="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 focus:border-brand-cyan/50 focus:bg-white/10 outline-none transition-all placeholder:text-white/20 text-white shadow-inner" placeholder="Acme Inc." required />
+                </div>
+
+                <div className="space-y-2 text-left">
+                  <label htmlFor="message" className="text-sm font-medium text-white/70 ml-1">How can we help?</label>
+                  <textarea id="message" rows={4} className="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 focus:border-brand-cyan/50 focus:bg-white/10 outline-none transition-all placeholder:text-white/20 text-white resize-none shadow-inner" placeholder="Briefly describe your use case or workflow challenges..." required></textarea>
+                </div>
+
+                <button type="submit" className="w-full py-4 mt-2 rounded-2xl bg-gradient-to-r from-brand-cyan to-brand-blue text-black font-bold text-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 group shadow-[0_0_20px_rgba(0,240,255,0.3)]">
+                  Submit Request <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </form>
             </div>
           </div>
         </section>
